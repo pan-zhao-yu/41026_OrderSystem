@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23 May 2020, 9:47:02 pm
+    Author     : Michelle Tanoto
+*/
+
+.main-component{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    min-width: 540px;
+    padding-left: 10px;
+    background-image: url("background.jpg");
+    position: absolute;
+    background-size: 100% 100%
+}
+.subtitle{
+    font-family: sans-serif;
+    font: arial;
+    font-size: 30px;
+}
+

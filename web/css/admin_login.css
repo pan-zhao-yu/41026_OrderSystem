@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 May 2020, 12:30:54 pm
+    Author     : Michelle Tanoto
+*/
+
+.warning{
+    font-family: sans-serif;
+    font: arial;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.main-component{
+    font-size: 16px;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    min-width: 540px;
+    background-image: url("background.jpg");
+    position: absolute;
+    background-size: 100% 100%
+}
+
+.main-component.dashboard-form-container {
+    display: none;
+    left: 50%;
+    margin-left: -400px;
+    position: absolute;
+    top: 50%;
+    width: 800px;
+    box-sizing: border-box;
+}
+
+.dashboard-form-container {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    width: 260px;
+    z-index: 5;
+}
+
+.dashboard-form-container.with-bg {
+    padding: 20px 30px 30px;
+}
+
+.dashboard-form-container.has-subheading {
+    margin-top: -241px;
+}
+
+ .subtitle{
+    font-family: sans-serif;
+    font: arial;
+ }
+  
+ .form-title{
+      font-family: sans-serif;
+      font: arial;
+      text-align: center;
+ }
+ 
+ .break{
+    height:15px;
+}
+ 
+a { text-decoration: none; margin: 0 10px; }
+
+a.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+        font-family: sans-serif;
+        font: arial;
+}
+a.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+ 
+input { text-decoration: none; margin: 0 10px; }
+
+input.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+        font-family: sans-serif;
+        font: arial;
+}
+input.btn:hover {
+	background-color: #e3e3e3;
+	border-color: rgba(0,0,0,0.5);
+}
+input.btn.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+input.btn.btn-blue:hover {
+        background-color: #4F87A2;
+	border-color: rgba(0,0,0,0.5);
+}
+
+.button-container p { margin-top: 10px; }
+
+.required:after {
+    content:" *";
+    color: red;
+  }
+  
