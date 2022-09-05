@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"/>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.18.1/axios.min.js"></script>
+    <title>Staff</title>
+    <style>
+        .el-table th.el-table__cell {
+            background: #f5f7fa;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+	<h1>Staff Management</h1>
+    <div style="float: right;margin-bottom: 10px;">
+        <el-button type="success" @click="addStaff">Add</el-button>
+        <el-button type="primary" @click="editStaff">Edit</el-button>
+        <el-button type="danger" @click="deleteStaff">Delete</el-button>
+    </div>
+    <template>
+        <el-table
+                :data="tableData"
+                height="250"
+                border
+                style="width: 100%">
+            <el-table-column
+                    prop="id"
+                    label="id">
+            </el-table-column>
+            <el-table-column
+                    prop="name"
+                    label="name">
+            </el-table-column>
+            <el-table-column
+                    prop="gender"
+                    label="gender">
+            </el-table-column>
+            <el-table-column
+                    prop="age"
+                    label="age">
+            </el-table-column>
+            <el-table-column
+                    prop="phone"
+                    label="phone">
+            </el-table-column>
+            <el-table-column
+                    prop="username"
+                    label="username">
+            </el-table-column>
+            <el-table-column
+                    prop="password"
+                    label="password">
+            </el-table-column>
+        </el-table>
+    </template>
+    <el-dialog :title="dialogTitle" :visible.sync="dialogFormVisible" width="40%" :close-on-click-modal="false">
+        <el-form :model="staffForm" :rules="rules" ref="staffForm" label-width="100px" class="demo-staffForm">
+            <el-form-item label="name" prop="name">
+                <el-input v-model="staffForm.name"></el-input>
+            </el-form-item>
+            <el-form-item label="gender" prop="gender">
+                <el-select v-model="staffForm.gender" placeholder="--" style="width: 50%;">
+                    <el-option label="male" value="male"></el-option>
+                    <el-option label="female" value="female"></el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="age" prop="age">
+                <el-input-number v-model="staffForm.age" controls-position="right" :min="1" style="width: 50%;"></el-input-number>
+            </el-form-item>
+            <el-form-item label="phone" prop="phone">
+                <el-input v-model="staffForm.phone"></el-input>
+            </el-form-item>
+            <el-form-item label="username" prop="username">
+                <el-input v-model="staffForm.username"></el-input>
+            </el-form-item>
+            <el-form-item label="password" prop="password">
+                <el-input type="password" v-model="staffForm.password" autocomplete="off"></el-input>
+            </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+            <el-button @click="dialogFormVisible = false">Cancel</el-button>
+            <el-button type="primary" @click="save()">Confirm</el-button>
+        </div>
+    </el-dialog>
+</div>
+<script>
+    let Main = {
+        data() {
+            return {
+                dialogTitle:'',
+                dialogFormVisible:false,
+                rules:{
+                    name: [
+                        {required: true, message: 'Cannot be empty!', trigger: 'change'}],
+                    gender: [
+                        {required: true, message: 'Cannot be empty!', trigger: 'change'}],
+                    age: [
+                        {required: true, message: 'Cannot be empty!', trigger: 'change'}],
+                    phone: [
+                        {required: true, message: 'Cannot be empty!', trigger: 'change'}],
+                    username: [
+                        {required: true, message: 'Cannot be empty!', trigger: 'change'}],
+                    password: [
+                        {required: true, message: 'Cannot be empty!', trigger: 'change'}]
+                },
+                staffForm:{
+                    id:'',
+                    name:'',
+                    gender:'',
+                    age:'',
+                    phone:'',
+                    username:'',
+                    password:''
+                },
+                tableData: [{
+                    id:1,
+                    name:'',
+                    gender:'',
+                    age:'',
+                    phone:'',
+                    username:'',
+                    password:''
+                }]
+            }
+        },
+        methods: {
+            addStaff(){
+                this.dialogTitle = 'Add Staff';
+                this.dialogFormVisible = true;
+                if(this.$refs["staffForm"]!=undefined) {
+                    this.$refs["staffForm"].resetFields();
+                }
+            },
+            editStaff(){
+                this.dialogTitle = 'Edit Staff';
+                this.dialogFormVisible = true;
+            },
+            save(){
+                this.$refs["staffForm"].validate((valid) => {
+                        if (valid) {
+                        this.dialogFormVisible = false;
+                        this.$message({
+                            type: 'success',
+                            message: 'success!'
+                        });
+                        }
+                });
+            },
+            deleteStaff(){
+                this.$confirm('Are you sure to delete?', 'Tips', {
+                    confirmButtonText: 'confirm',
+                    cancelButtonText: 'Cancel',
+                    type: 'warning'
+                }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: 'success!'
+                    });
+                }).catch(() => {
+
+                });
+            }
+        },
+        mounted () {
+
+        }
+    };
+    let Ctor = Vue.extend(Main)
+    new Ctor().$mount('#app')
+</script>
+</body>
+</html>
