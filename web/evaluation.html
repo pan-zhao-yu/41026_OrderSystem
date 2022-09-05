@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+    <link href="css/nps.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        .star-wrapper {
+            margin-top: 10px;
+            margin-left: 20px;
+            padding: 2px 0;
+            text-align: left;
+            line-height: 40px;
+        }
+        .star-wrapper .rate-item {
+            width: 50%;
+            height: 50%;
+            background-size: 50%;
+            background-color: #808080;
+        }
+        .star-wrapper .rate-item .cube-rate-item.active,
+        .star-wrapper .rate-item .rate-item {
+            background-color: #ffa500;
+        }
+        .info {
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div id="container">
+        <div id="header">
+            <div id="header-content">
+                Rate Our Service
+            </div>
+        </div>
+        <div id="content">
+            <div class="question">
+                <div class="title">
+                    <div class="chip">1</div>Please rate the services of our platform.
+                </div>
+            </div>
+            <div class="nps-container">
+                <div class="nps">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-0" name="nps" value="0"><label for="nps-0">0</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-1" name="nps" value="1"><label for="nps-1">1</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-2" name="nps" value="2"><label for="nps-2">2</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-3" name="nps" value="3"><label for="nps-3">3</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-4" name="nps" value="4"><label for="nps-4">4</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-5" name="nps" value="5"><label for="nps-5">5</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-6" name="nps" value="6"><label for="nps-6">6</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-7" name="nps" value="7"><label for="nps-7">7</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-8" name="nps" value="8"><label for="nps-8">8</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-9" name="nps" value="9"><label for="nps-9">9</label>
+                            </td>
+                            <td>
+                                <input type="radio" class="nps-radio" id="nps-10" name="nps" value="10"><label for="nps-10">10</label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <table style="width: 100%; margin-top: 5px;">
+                    <tr>
+                        <td style="width: 50%; text-align: left;">
+                            <div>0 = not likely</div>
+                            <svg style="height:50px; position: relative; left: -9px;" viewBox="0 0 24 24">
+                                <path fill="#F44336" d="M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M15.5,8C16.3,8 17,8.7 17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8M10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5M12,14C13.75,14 15.29,14.72 16.19,15.81L14.77,17.23C14.32,16.5 13.25,16 12,16C10.75,16 9.68,16.5 9.23,17.23L7.81,15.81C8.71,14.72 10.25,14 12,14Z" />
+                            </svg>
+                        </td>
+                        <td style="width: 50%; text-align: right;">
+                            <div>10 = very likely</div>
+                            <svg style="height:50px; position: relative; right: -9px;" viewBox="0 0 24 24">
+                                <path fill="#4CAF50" d="M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5M17,9.5C17,10.3 16.3,11 15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8C16.3,8 17,8.7 17,9.5M12,17.23C10.25,17.23 8.71,16.5 7.81,15.42L9.23,14C9.68,14.72 10.75,15.23 12,15.23C13.25,15.23 14.32,14.72 14.77,14L16.19,15.42C15.29,16.5 13.75,17.23 12,17.23Z" />
+                            </svg>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="question">
+                    <div class="title">
+                        <div class="chip">2</div>I'd like to provide feedback about...
+                    </div>
+                </div>
+                <div id="open-question">
+                    <textarea rows="3"></textarea>
+                </div>
+
+                <div class="question">
+                    <div class="title">
+                        <div class="chip">3</div>Are you satisfied with the delivery person?
+                    </div>
+                </div>
+                <div class="closed-question-container" >
+                    <cube-radio-group v-model="selected2" :options="options2" :hollow-style="true" />
+                </div>
+
+
+                <div class="question">
+                    <div class="title">
+                        <div class="chip">4</div>What attracted you to place an order?
+                    </div>
+                </div>
+                <div class="open-question" >
+                    <cube-checkbox-group v-model="checkList4" :options="options4" />
+                </div>
+
+                <div class="question">
+                    <div class="title">
+                        <div class="chip">5</div>
+                        Are you satisfied with the food?
+                    </div>
+                    <div class="star-wrapper">
+                        <span style="width:100px; text-align:left;  display:inline-block;">Overall</span>
+                        <cube-rate v-model="value1"></cube-rate>
+                    </div>
+                    <div class="star-wrapper">
+                        <span style="width:100px; text-align:left;  display:inline-block;">Packaging</span>
+                        <cube-rate v-model="value2"></cube-rate>
+                    </div>
+                    <div class="star-wrapper">
+                        <span style="width:100px; text-align:left;  display:inline-block;">Taste</span>
+                        <cube-rate v-model="value3"></cube-rate>
+                    </div>
+
+                </div>
+
+                <div id="validation">
+                    <button type="button" @click="open2">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            value1: 0,
+            value2: 0,
+            value3: 0,
+            checkList: [],
+            selected2: 3,
+            options2: [
+                {
+                    label: 'Excellent',
+                    value: 1
+                },
+                {
+                    label: 'Terrible',
+                    value: 2
+                }
+            ],
+            checkList4: [],
+            options4: [
+                'Affordable prices',
+                'Recommended by others',
+                'Attractive advertising'
+            ]
+        },
+        methods: {
+            open2() {
+                this.$message({
+                    message: 'Submission successful. Thank you!',
+                    type: 'success'
+                });
+            },
+        }
+    })
+</script>
+</body>
+
+</html>
