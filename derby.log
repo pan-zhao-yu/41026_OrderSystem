@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Sep 05 12:11:35 UTC 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0183-0d90-2767-0000076863a8 
+on database directory /Users/hehuiming/IdeaProjects/41026_OrderSystem/sql/menu with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@67424e82 
+Loaded from file:/Users/hehuiming/Library/Application%20Support/JetBrains/IntelliJIdea2022.2/jdbc-drivers/Apache%20Derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=JetBrains s.r.o.
+java.runtime.version=17.0.3+7-b469.37
+user.dir=/Users/hehuiming/IdeaProjects/41026_OrderSystem
+os.name=Mac OS X
+os.arch=x86_64
+os.version=12.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
