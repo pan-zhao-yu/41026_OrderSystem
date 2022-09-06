@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae9c9aad-661a-4e1f-b576-f2c8fc45c7d2" name="Changes" comment="sql">
-      <change afterPath="$PROJECT_DIR$/sql/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/ShoppingCart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Menu.html" afterDir="false" />
+    <list default="true" id="ae9c9aad-661a-4e1f-b576-f2c8fc45c7d2" name="Changes" comment="Sql query for user login">
+      <change beforePath="$PROJECT_DIR$/web/css/nps.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +52,8 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "vcs.Git"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="User.sql" type="DatabaseScript" editBeforeRun="true">
       <script-file value="$PROJECT_DIR$/sql/User.sql" />
@@ -80,7 +71,10 @@
       <updated>1662120249723</updated>
       <workItem from="1662199696871" duration="5130000" />
       <workItem from="1662359806929" duration="8095000" />
-      <workItem from="1662379549845" duration="1224000" />
+      <workItem from="1662379549845" duration="1541000" />
+      <workItem from="1662381111968" duration="58000" />
+      <workItem from="1662381175244" duration="793000" />
+      <workItem from="1662435200697" duration="3123000" />
       <workItem from="1662381026259" duration="54000" />
       <workItem from="1662381184172" duration="58000" />
       <workItem from="1662473521250" duration="4468000" />
@@ -106,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662380622759</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Sql query for user login">
+      <created>1662380788748</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662380788748</updated>
+    </task>
+    <task id="LOCAL-00005" summary="User model finished">
+      <created>1662463484622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662463484622</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +135,7 @@
     <MESSAGE value="m" />
     <MESSAGE value="Login and Register interface only" />
     <MESSAGE value="Sql query for user login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sql query for user login" />
+    <MESSAGE value="User model finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="User model finished" />
   </component>
 </project>
