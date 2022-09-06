@@ -1,0 +1,389 @@
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+div, label, textarea {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body {
+    background: #f3f3f3;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+#container {
+    max-width: 1080px;
+
+    margin: 25px auto;
+    padding-bottom: 1px; /* BUG FIX TEMPORAIRE */
+
+    background: #fbfbfb;
+
+    box-shadow:  0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+#header {
+    position: relative;
+    height: 150px;
+    padding: 0 15px;
+
+    background: url('https://cdn.shutterstock.com/shutterstock/videos/5268683/thumb/1.jpg');
+    background-size: 100%;
+    opacity: 0.99;
+
+    color: #FFFFFF;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#header::after {
+    content: "";
+    background: #ffd000;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#header-content {
+    position: absolute;
+    bottom: 15px;
+}
+
+#content {
+    margin: 25px;
+}
+
+.question {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.chip {
+    display: inline-block;
+
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 5px;
+    font-size: 19px;
+
+    text-align: center;
+
+    background: #ffd000;
+    border-radius: 50%;
+
+    color: white;
+}
+
+.nps-container {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nps-container > .nps {
+    width: 100%;
+    margin: auto;
+    height: 50px;
+}
+
+.nps-container > .nps > table {
+    border-collapse: collapse;
+}
+
+.nps-container > .nps > table,
+.nps-container > .nps > table > tbody,
+.nps-container > .nps > table > tbody > tr {
+    width: 100%;
+}
+
+.nps-container > .nps > table > tbody > tr > td {
+    width: 9.090909091%;
+    height: 50px;
+}
+
+.nps-container > .nps input[id^=nps-] {
+    display: none;
+}
+
+.nps-container > .nps input[id^=nps-] + label {
+    float: left;
+
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+
+    background: white;
+    color: black;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    box-shadow:  0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+.nps-container > .nps input[id^=nps-] + label:active {
+    background: #ffd000;
+    color: white;
+    transform: scale(1.3);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.nps-container > .nps input[id^=nps-]:checked + label:hover {
+    background: #ffd000;
+    color: white;
+    transform: scale(1);
+}
+
+.nps-container > .nps input[id^=nps-]:checked + label {
+    background: #ffd000;
+    color: white;
+}
+
+.nps-container > .legende,
+.nps-container > .legende tbody,
+.nps-container > .legende tbody tr {
+    width: 100%;
+}
+
+
+.nps-container > .legende {
+    margin: 5px 0;
+}
+
+#open-question {
+    margin: 10px 0;
+}
+
+#open-question textarea {
+    width: 100%;
+    resize: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    outline-color: #ffd000;
+    padding: 5px;
+}
+
+.closed-question-container {
+    margin: 10px 0;
+}
+
+.closed-question-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.closed-question-container td {
+    display: block;
+}
+
+.closed-question-container td > input {
+    display: none;
+}
+
+.closed-question-container td > label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.closed-question-container td > label:before {
+    content: "radio_button_unchecked ";
+    vertical-align:bottom;
+    position: relative;
+    top: -2px;
+
+    font-family: 'Material Icons';
+}
+
+.closed-question-container td > input:checked + label {
+    background: #ffd000;
+    border: 1px solid #ffd000;
+    color: #FFFFFF;
+}
+
+.closed-question-container td > input:checked + label:before {
+    content: "check_circle ";
+    vertical-align:bottom;
+    position: relative;
+    top: -2px;
+
+    font-family: 'Material Icons';
+}
+
+
+
+
+
+.qcm-container {
+    margin: 10px 0;
+}
+
+.qcm-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.qcm-container td {
+    display: block;
+}
+
+.qcm-container td > input {
+    display: none;
+}
+
+.qcm-container td > label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.qcm-container td > label:before {
+    content: "check_box_outline_blank ";
+    vertical-align: bottom;
+    position: relative;
+    top: -2px;
+
+    font-family: 'Material Icons';
+}
+
+.qcm-container td > input:checked + label {
+    background: #ffd000;
+    border: 1px solid #ffd000;
+    color: #FFFFFF;
+}
+
+.qcm-container td > input:checked + label:before {
+    content: "check_box ";
+    vertical-align:bottom;
+    position: relative;
+    top: -2px;
+
+    font-family: 'Material Icons';
+}
+
+
+
+
+
+
+#validation {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    padding: 10px 25px;
+
+    background: #ffd000 !important;
+    color: white !important;
+    border: none;
+
+    font-size: 1.2em;
+
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+@media (max-width: 680px) {
+    #container {
+        margin: 0;
+    }
+}
+
+@media (max-width: 475px) {
+    .nps-container > .nps > input[id^=nps-] + label {
+        font-size: 20px;
+    }
+}
+
+/* ETOILES */
+
+.star-cb-group {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    /* the hidden clearer */
+}
+.star-cb-group * {
+    font-size: 2rem;
+}
+.star-cb-group > input {
+    display: none;
+}
+.star-cb-group > input + label {
+    /* only enough room for the star */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.star-cb-group > input + label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "☆";
+    color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+    content: "★";
+    color: #ffd000;
+    text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+    width: .5em;
+}
+.star-cb-group:hover > input + label:before {
+    content: "☆";
+    color: #888;
+    text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+    content: "★";
+    color: #ffd000;
+    text-shadow: 0 0 1px #333;
+}
+
+fieldset.star-fieldset {
+    width: 14em;
+    padding: 0 0 0 1.5em;
+    border: none;
+}
