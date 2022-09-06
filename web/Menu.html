@@ -5,6 +5,35 @@
     <title>Menu</title>
 </head>
 <body>
+<table>
+    <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Type</th>
+    <th>In Stock</th>
+    <th>   </th>
+    </thead>
+    <tbody>
 
+    <tr>
+        <td>1</td>
+        <td>a</td>
+        <td>33</td>
+        <td>meat</td>
+        <td>   2</td>
+        <td>
+            <a href="update_device.jsp?id=<%=device.getId()%>&name=<%=device.getName()%>
+                           &price=<%=device.getPrice()%>&type=<%=device.getType()%>&stock=<%=device.getStock()%>">Update</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="DeleteDeviceServlet?id=<%=device.getId()%>">Delete</a>
+        </td>
+    </tr>
+
+    <tr>
+        <a >Create</a>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

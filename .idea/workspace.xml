@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae9c9aad-661a-4e1f-b576-f2c8fc45c7d2" name="Changes" comment="Sql query for user login">
-      <change beforePath="$PROJECT_DIR$/web/css/nps.css" beforeDir="false" />
+    <list default="true" id="ae9c9aad-661a-4e1f-b576-f2c8fc45c7d2" name="Changes" comment="sql">
+      <change afterPath="$PROJECT_DIR$/sql/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/ShoppingCart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/Menu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,6 +56,11 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "vcs.Git"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -73,6 +81,9 @@
       <workItem from="1662199696871" duration="5130000" />
       <workItem from="1662359806929" duration="8095000" />
       <workItem from="1662379549845" duration="1224000" />
+      <workItem from="1662381026259" duration="54000" />
+      <workItem from="1662381184172" duration="58000" />
+      <workItem from="1662473521250" duration="4468000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1662359933248</created>
